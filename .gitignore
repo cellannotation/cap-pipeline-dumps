@@ -1,0 +1,6 @@
+solr.json
+solr_out.json
+.idea
+.DS_Store
+test
+venv
