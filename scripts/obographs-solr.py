@@ -162,9 +162,9 @@ def obographs2solr(obo, curie_map, filters):
 
             # Adding parent information
             # Do you want to see IRI or Short form?
-            se["parent"] = {}
+            se["parent"] = []
             if 'Animal_cell' in se['facets_annotation']:
-                se["parent"] = edge.get(id)
+                se["parent"] = list(edge.get(id).items())
 
             for key in se:
                 if isinstance(se[key], list) and ('autosuggest' in key):
