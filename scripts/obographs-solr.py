@@ -163,7 +163,7 @@ def obographs2solr(obo, curie_map, filters):
             # Adding parent information
             # Do you want to see IRI or Short form?
             se["parent"] = []
-            if 'Cell' in se['facets_annotation']:
+            if 'Cell' in se['facets_annotation'] and edge.get(id):
                 se["parent"] = list(edge.get(id).items())
 
             for key in se:
